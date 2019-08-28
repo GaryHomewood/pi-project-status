@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project status</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+<body>
+  <main>
+    <h1>Project status</h1>
+    <ul>
+      {{each(options.team)}}
+      <li>
+        <a href="/{{@this['name'].toLowerCase().replace(' ', '-')}}.html">{{@this['name']}}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>

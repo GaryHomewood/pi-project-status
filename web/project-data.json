@@ -1,0 +1,11 @@
+{
+  "team": [
+    {"name": "Developer 1"},
+    {"name": "Developer 2"},
+    {"name": "Developer 3"}
+  ],
+  "metrics": [
+    "Client happy",
+    "Sprint on track"
+  ]
+}

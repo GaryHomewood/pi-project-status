@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{teamMember}} - Project status</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+<body>
+  <main>
+    <h1>{{ teamMember }}</h1>
+    <form>
+      <input type="hidden" id="userId" name="userId" value="{{ teamMember }}">
+      {{each(options.metrics)}}
+      <p>{{@this}}</p>
+      <div class="radio-items">
+        <div class="radio-item radio-item--green">
+          <input type="radio" id="{{@index + 1}}green" name="{{@index + 1}}status" value="{{@index + 1}}green">
+          <label for="{{@index + 1}}green"></label>
+        </div>
+        <div class="radio-item radio-item--amber">
+          <input type="radio" id="{{@index + 1}}amber" name="{{@index + 1}}status" value="{{@index + 1}}amber">
+          <label for="{{@index + 1}}amber"></label>
+        </div>
+        <div class="radio-item radio-item--red">
+          <input type="radio" id="{{@index + 1}}red" name="{{@index + 1}}status" value="{{@index + 1}}red">
+          <label for="{{@index + 1}}red"></label>
+        </div>
+      </div>
+      {{/each}}
+    </form>
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>
