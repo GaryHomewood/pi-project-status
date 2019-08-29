@@ -16,12 +16,13 @@ fs.readFile('templates/index.html', "utf8", (err, indexTemplate) => {
 // create user pages
 fs.readFile('templates/user.html', "utf8", (err, userTemplate) => {
   if (err) throw err;
-  Array.from(projectData['team']).forEach(teamMember => {
+  Array.from(projectData['team']).forEach((user, idx) => {
     const userPage = Sqrl.Render(userTemplate, {
-      teamMember: teamMember['name'],
+      userId: idx,
+      userName: user['name'],
       metrics: projectData['metrics']
     })
-    const userPageName = `${teamMember['name'].toLowerCase()}.html`.replace(' ', '-');
+    const userPageName = `${user['name'].toLowerCase()}.html`.replace(' ', '-');
     fs.writeFileSync(userPageName, userPage)
   })
 })

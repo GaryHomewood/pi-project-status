@@ -4,6 +4,13 @@
 
 A simple web client and python Flask API to be run on a Rasperry Pi with an LED shim, for traffic lighting the status of a project.
 
+## Dependencies
+
+```bash
+brew install yarn
+yarn global add parcel-bundler
+```
+
 ## API
 
 ```bash

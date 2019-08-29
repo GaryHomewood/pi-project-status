@@ -6,6 +6,7 @@
   ],
   "metrics": [
     "Client happy",
+    "Team happy",
     "Sprint on track"
   ]
 }

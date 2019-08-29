@@ -11,8 +11,9 @@ Array.from(rb).forEach((b) => {
     window.navigator.vibrate(200);
 
     const payload = {
-      userId: document.getElementById('userId').value,
-      questionId: e.target.value.substring(0, 1),
+      userId: parseInt(document.getElementById('userId').value, 10),
+      metricId: parseInt(e.target.value.substring(0, 1), 10),
+      metricCount: document.getElementById('allMetrics').value.split(',').length,
       status: e.target.value.substring(1),
     };
 

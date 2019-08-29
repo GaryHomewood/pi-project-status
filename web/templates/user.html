@@ -3,28 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{teamMember}} - Project status</title>
+    <title>{{ userName }} - Project status</title>
     <link rel="stylesheet" type="text/css" href="index.css">
   </head>
 <body>
   <main>
-    <h1>{{ teamMember }}</h1>
+    <h1>{{ userName }}</h1>
     <form>
-      <input type="hidden" id="userId" name="userId" value="{{ teamMember }}">
+      <input type="hidden" id="userId" name="userId" value="{{ userId }}">
+      <input type="hidden" id="allMetrics" name="allMetrics" value="{{ metrics }}">
       {{each(options.metrics)}}
       <p>{{@this}}</p>
       <div class="radio-items">
         <div class="radio-item radio-item--green">
-          <input type="radio" id="{{@index + 1}}green" name="{{@index + 1}}status" value="{{@index + 1}}green">
-          <label for="{{@index + 1}}green"></label>
+          <input type="radio" id="{{ @index }}green" name="{{ @index }}status" value="{{ @index }}green">
+          <label for="{{ @index }}green"></label>
         </div>
         <div class="radio-item radio-item--amber">
-          <input type="radio" id="{{@index + 1}}amber" name="{{@index + 1}}status" value="{{@index + 1}}amber">
-          <label for="{{@index + 1}}amber"></label>
+          <input type="radio" id="{{ @index }}amber" name="{{ @index }}status" value="{{ @index }}amber">
+          <label for="{{ @index }}amber"></label>
         </div>
         <div class="radio-item radio-item--red">
-          <input type="radio" id="{{@index + 1}}red" name="{{@index + 1}}status" value="{{@index + 1}}red">
-          <label for="{{@index + 1}}red"></label>
+          <input type="radio" id="{{ @index }}red" name="{{ @index }}status" value="{{ @index }}red">
+          <label for="{{ @index }}red"></label>
         </div>
       </div>
       {{/each}}
