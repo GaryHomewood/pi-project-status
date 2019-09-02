@@ -20,7 +20,8 @@ fs.readFile('templates/user.html', "utf8", (err, userTemplate) => {
     const userPage = Sqrl.Render(userTemplate, {
       userId: idx,
       userName: user['name'],
-      metrics: projectData['metrics']
+      metricCount: projectData['metrics'].length,
+      metrics: projectData['metrics'],
     })
     const userPageName = `${user['name'].toLowerCase()}.html`.replace(' ', '-');
     fs.writeFileSync(userPageName, userPage)

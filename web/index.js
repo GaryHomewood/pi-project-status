@@ -13,7 +13,7 @@ Array.from(rb).forEach((b) => {
     const payload = {
       userId: parseInt(document.getElementById('userId').value, 10),
       metricId: parseInt(e.target.value.substring(0, 1), 10),
-      metricCount: document.getElementById('allMetrics').value.split(',').length,
+      metricCount: parseInt(document.getElementById('metricCount').value, 10),
       status: e.target.value.substring(1),
     };
 
