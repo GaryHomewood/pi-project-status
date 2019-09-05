@@ -3,19 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project status</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>{{ project }} status</title>
+    <link href="index.less" rel="stylesheet">
   </head>
 <body>
   <main>
-    <h1>Project status</h1>
+    <h1>{{ project }} status</h1>
     <ul>
       {{each(options.team)}}
       <li>
-        <a href="/{{@this['name'].toLowerCase().replace(' ', '-')}}.html">{{@this['name']}}</a>
+        <a class="team-member-link" href="/{{@this['name'].toLowerCase().replace(' ', '-')}}.html">{{@this['name']}}</a>
       </li>
       {{/each}}
     </ul>
+    <input type="hidden" id="pixelCount" name="pixelCount" value="{{ pixelCount }}">
+    <section class="admin">
+      <a href="/label.html">Print label</a>
+      <button class="btn button__reset">Reset</button>
+    </section>
   </main>
   <script src="./index.js"></script>
 </body>

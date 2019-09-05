@@ -3,23 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project status</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>New site status</title>
+    <link href="index.less" rel="stylesheet">
   </head>
 <body>
   <main>
-    <h1>Project status</h1>
+    <h1>New site status</h1>
     <ul>
             <li>
-        <a href="/developer-1.html">Developer 1</a>
+        <a class="team-member-link" href="/developer-1.html">Developer 1</a>
       </li>
             <li>
-        <a href="/developer-2.html">Developer 2</a>
+        <a class="team-member-link" href="/developer-2.html">Developer 2</a>
       </li>
             <li>
-        <a href="/developer-3.html">Developer 3</a>
+        <a class="team-member-link" href="/developer-3.html">Developer 3</a>
       </li>
           </ul>
+    <input type="hidden" id="pixelCount" name="pixelCount" value="9">
+    <section class="admin">
+      <a href="/label.html">Print label</a>
+      <button class="btn button__reset">Reset</button>
+    </section>
   </main>
   <script src="./index.js"></script>
 </body>

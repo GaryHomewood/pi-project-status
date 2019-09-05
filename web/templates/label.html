@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ project }} status</title>
+    <link href="index.less" rel="stylesheet">
+  </head>
+<body class="label">
+  <h1>{{ project }}</h1>
+  <ol class="team-size-{{ teamSize }}">
+    {{each(options.metrics)}}
+    <li>
+      <span>{{@this}}</span>
+    </li>
+    {{/each}}
+  </ol>
+</body>
+</html>

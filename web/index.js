@@ -30,3 +30,22 @@ Array.from(rb).forEach((b) => {
     .catch(error => console.error(error));
   });
 })
+
+const reset = document.querySelector('.button__reset');
+if (reset !== null) {
+  reset.addEventListener('click', e => {
+    const payload = {
+      pixelCount: parseInt(document.getElementById('pixelCount').value, 10),
+    };
+
+    fetch(`http://${process.env.API_SERVER}:${process.env.API_PORT}/api/v1.0/reset`, {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload)
+    })
+    .catch(error => console.error(error));
+  });
+}

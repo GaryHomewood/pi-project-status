@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ userName }} - Project status</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>{{ userName }} - {{ project }} status</title>
+    <link href="index.less" rel="stylesheet">
   </head>
 <body>
   <main>
@@ -13,7 +13,7 @@
       <input type="hidden" id="userId" name="userId" value="{{ userId }}">
       <input type="hidden" id="metricCount" name="metricCount" value="{{ metricCount }}">
       {{each(options.metrics)}}
-      <p>{{@this}}</p>
+      <p>{{ @index + 1 }}. {{@this}}</p>
       <div class="radio-items">
         <div class="radio-item radio-item--green">
           <input type="radio" id="{{ @index }}green" name="{{ @index }}status" value="{{ @index }}green">
