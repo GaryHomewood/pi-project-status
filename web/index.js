@@ -11,9 +11,9 @@ Array.from(rb).forEach((b) => {
     window.navigator.vibrate(200);
 
     const payload = {
-      userId: parseInt(document.getElementById('userId').value, 10),
       metricId: parseInt(e.target.value.substring(0, 1), 10),
-      metricCount: parseInt(document.getElementById('metricCount').value, 10),
+      teamMemberId: parseInt(document.getElementById('teamMemberId').value, 10),
+      teamMemberCount: parseInt(document.getElementById('teamMemberCount').value, 10),
       status: e.target.value.substring(1),
     };
 

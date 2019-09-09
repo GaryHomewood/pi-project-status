@@ -18,15 +18,15 @@ fs.readFile('templates/index.html', "utf8", (err, indexTemplate) => {
 // create team member pages
 fs.readFile('templates/team-member.html', "utf8", (err, teamMemberTemplate) => {
   if (err) throw err;
-  Array.from(projectData['team']).forEach((user, idx) => {
+  Array.from(projectData['team']).forEach((teamMember, idx) => {
     const teamMemberPage = Sqrl.Render(teamMemberTemplate, {
       project: projectData['project'],
-      userId: idx,
-      userName: user['name'],
-      metricCount: projectData['metrics'].length,
+      teamMemberId: idx,
+      teamMemberName: teamMember['name'],
+      teamMemberCount: projectData['team'].length,
       metrics: projectData['metrics'],
     })
-    const teamMemberPageName = `${user['name'].toLowerCase()}.html`.replace(' ', '-');
+    const teamMemberPageName = `${teamMember['name'].toLowerCase()}.html`.replace(' ', '-');
     fs.writeFileSync(teamMemberPageName, teamMemberPage)
   })
 })

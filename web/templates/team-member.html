@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ userName }} - {{ project }} status</title>
+    <title>{{ teamMemberName }} - {{ project }} status</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="index.less" rel="stylesheet">
   </head>
 <body>
   <main>
-    <h1>{{ userName }}</h1>
+    <h1>{{ teamMemberName }}</h1>
     <form>
-      <input type="hidden" id="userId" name="userId" value="{{ userId }}">
-      <input type="hidden" id="metricCount" name="metricCount" value="{{ metricCount }}">
+      <input type="hidden" id="teamMemberId" name="teamMemberId" value="{{ teamMemberId }}">
+      <input type="hidden" id="teamMemberCount" name="teamMemberCount" value="{{ teamMemberCount }}">
 {{each(options.metrics)}}
       <p>{{ @index + 1 }}. {{@this}}</p>
       <div class="radio-items">
