@@ -3,7 +3,8 @@
   "team": [
     {"name": "Developer 1"},
     {"name": "Developer 2"},
-    {"name": "Developer 3"}
+    {"name": "Developer 3"},
+    {"name": "Another dev"}
   ],
   "metrics": [
     "Client happy",

@@ -4,16 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ project }} status</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="index.less" rel="stylesheet">
   </head>
 <body class="label">
   <h1>{{ project }}</h1>
   <ol class="team-size-{{ teamSize }}">
-    {{each(options.metrics)}}
+{{each(options.metrics)}}
     <li>
       <span>{{@this}}</span>
     </li>
-    {{/each}}
+{{/each}}
   </ol>
 </body>
 </html>

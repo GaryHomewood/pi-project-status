@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ userName }} - {{ project }} status</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="index.less" rel="stylesheet">
   </head>
 <body>
@@ -12,7 +13,7 @@
     <form>
       <input type="hidden" id="userId" name="userId" value="{{ userId }}">
       <input type="hidden" id="metricCount" name="metricCount" value="{{ metricCount }}">
-      {{each(options.metrics)}}
+{{each(options.metrics)}}
       <p>{{ @index + 1 }}. {{@this}}</p>
       <div class="radio-items">
         <div class="radio-item radio-item--green">
@@ -28,7 +29,7 @@
           <label for="{{ @index }}red"></label>
         </div>
       </div>
-      {{/each}}
+{{/each}}
     </form>
   </main>
   <script src="./index.js"></script>
