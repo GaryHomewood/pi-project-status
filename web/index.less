@@ -171,43 +171,54 @@ button {
   background-color: white;
   border: none;
   color: black;
-  font-family: 'Times New Roman', Times, serif;
-  padding: 0 2cm;
+  font-family: 'Cabin', sans-serif;
   margin: 0;
 
+  main {
+    border: 1px solid #ddd;
+    height: 8.5cm;
+    margin-top: 4cm;
+    padding: 0;
+    width: 5.4cm;
+  }
+
   h1 {
-    padding: 0 0 0 1.15cm;
+    background-color: black;
     border: none;
+    color: white;
+    font-size: 22pt;
+    margin: 0;
+    padding: 0.2cm 0 0.2cm 0.4cm;
   }
 
   ol {
-    padding: 0;
-    list-style: none;
-    counter-reset: item;
     border-top: 1px solid black;
+    counter-reset: item;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
   
   ol li {
-    counter-increment: item;
     border-bottom: 1px solid black;
-    padding: 0.2cm 0.5cm;
-    font-size: 18pt;
-    height: 5cm;
+    counter-increment: item;
     display: flex;
     flex-direction: column;
+    font-size: 13pt;
     justify-content: center;
+    padding-left: 0.4cm;
   }
 
   .team-size-3 li {
-    height: 0.6cm;
+    height: 0.75cm;
   }
   
   .team-size-4 li {
-    height: 0.8cm;
+    height: 1cm;
   }
   
   .team-size-5 li {
-    height: 1cm;
+    height: 1.25cm;
   }
   
   ol li span:before {
