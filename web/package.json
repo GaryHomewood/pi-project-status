@@ -1,5 +1,7 @@
 {
   "name": "web",
+  "description": "A web client application for the Rapsberry Pi LED status.",
+  "repository": "https://github.com/GaryHomewood/pi-project-status.git",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

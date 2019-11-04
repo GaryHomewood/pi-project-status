@@ -35,8 +35,14 @@ Use data from `project-data.json` to generate the html.
 yarn run build
 ```
 
-Run a server.
+Start up a developement server, including auto rebuild on file changes:
 
 ```bash
 parcel index.html
+```
+
+Build and minimise assets to the `dist` folder:
+
+```bash
+parcel build index.html
 ```
